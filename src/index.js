@@ -22,7 +22,18 @@ $(document).ready(function() {
     currentMobStateFunction = NPC.mobArray.find(mobFunction => mobFunction().defeated === false);
     console.log(currentMobStateFunction());
     // showMob();
-  })
+  });
+  
+  $("#attack-button").click(function() {
+    //call the attack function
+    //get the monster defense value
+    //calculate damage received
+    const damageDealt = mainCharStateFunction().attack - currentMobStateFunction().defense;
+    //pass the value to the receive damage function and pass that to the mob state change function
+    currentMobStateFunction(NPC.takeDamage(damageDealt));
+    showChar();
+    console.log(currentMobStateFunction());
+  });
   
   function showChar() {
     const currentChar = mainCharStateFunction();

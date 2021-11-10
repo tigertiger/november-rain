@@ -26,8 +26,8 @@ export const giveAttackFunction = (attackFunctionToGive) => {
 export const gainExp = State.changeState("exp")(3);
 export const levelUp = State.changeState("level")(1);
 
-export const takeDamage = State.changeState("hp")(-3);
-export const takeBigDamage = State.changeState("hp")(-10);
+export const takeDamage = State.changeState("hp");
+export const takeBigDamage = State.changeState("hp");
 
 export const healthPotion = State.changeState("hp")(5);
 

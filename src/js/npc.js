@@ -15,3 +15,6 @@ const unicorn = State.storeState({name: "Unicorn", level: 20, mobExp: 300, hp: 2
 const Axl = State.storeState({name: "Axl", level: 9000, mobExp: 500, hp: 300, attack: 50, defense: 50, defeated: false});
 
 export const mobArray = [slime, punk, indieKid, ben, budTender, unicorn, Axl];
+
+export const takeDamage = State.changeState("hp");
+export const takeBigDamage = State.changeState("hp");
